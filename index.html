@@ -1,0 +1,39 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pergunte ao Doge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/materialize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <img src="images/doge.png" alt="Doge" style="width: 300px; margin-top: 40px">
+            <h3>Pergunte ao Doge</h3>
+            <div class="row">
+                <div class="input-field col s12" style="width: 50%">
+                    <input id="opt1" type="text" onkeydown = "if (event.keyCode == 13)
+                    document.getElementById('myButton').click()">
+                    <label for="opt1">Opção 1</label>
+                </div>
+                <div class="input-field col s12" style="width: 50%" onkeydown = "if (event.keyCode == 13)
+                document.getElementById('myButton').click()">
+                    <input id="opt2" type="text">
+                    <label for="opt2">Opção 2</label>
+                </div>
+            </div>
+            <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="choose()">Adivinhar</a>
+            <h4 id="top"></h4>
+            <h1 id="result"></h1>
+        </center>
+    </div>
+</body>
+
+</html>
