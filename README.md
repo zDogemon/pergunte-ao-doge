@@ -1,4 +1,4 @@
-# PergunteAoDoge
+# Pergunte ao doge
 
 Seja bem-vindo ao Pergunte ao doge!
 <br><br>
