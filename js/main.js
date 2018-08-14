@@ -1,7 +1,6 @@
 function choose() {
     var y = Math.random();
-    var doge = '<h3>Pergunte ao doge</h3>\
-        <h4>E o doge escolheu...</h4>\
+    var doge = '<h4>E o doge escolheu...</h4>\
         <h1>';
     
     if (document.getElementById('opt1').value == "" || document.getElementById('opt2').value == "") {
