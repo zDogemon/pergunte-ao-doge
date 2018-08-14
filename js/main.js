@@ -14,7 +14,7 @@ function choose() {
     }
     
     doge += '</h1>\
-    <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="backMain()">Voltar</a>';
+    <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%; margin-top: 30px" onclick="backMain()">Voltar</a>';
     
     document.getElementById('batata').innerHTML = doge;
 }
