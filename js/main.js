@@ -1,6 +1,7 @@
 function choose() {
     var y = Math.random();
-    var doge = '<h4>E o doge escolheu...</h4>\
+    var doge = '<h3>Pergunte ao doge</h3>\
+        <h4>E o doge escolheu...</h4>\
         <h1>';
     
     if (document.getElementById('opt1').value == "" || document.getElementById('opt2').value == "") {
@@ -20,7 +21,7 @@ function choose() {
 }
 
 function backMain(){
-    var html = '\
+    var html = '<h3>Pergunte ao doge</h3>\
         <div class="input-field col s12" style="width: 50%">\
             <input id="opt1" type="text" onkeydown="if (event.keyCode == 13)\
             document.getElementById("myButton").click()">\
