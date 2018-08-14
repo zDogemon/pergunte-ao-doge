@@ -1,27 +1,34 @@
 function choose() {
     var y = Math.random();
-    var h1 = document.getElementById("result");
-    var h4 = document.getElementById("top");
+    var doge = '<h4>E o doge escolheu...</h4>\
+        <h1>';
+    
     if (document.getElementById('opt1').value == "" || document.getElementById('opt2').value == "") {
-        alert("Prencha todos os campos!");
+        alert("Preencha todos os campos!");
     } else {
         if (y < 0.5) {
-            h4.textContent = "E o doge escolheu...";
-            h1.textContent = document.getElementById('opt1').value;
+            doge += document.getElementById('opt1').value;
         } else {
-            h4.textContent = "E o doge escolheu...";
-            h1.textContent = document.getElementById('opt2').value;
+            doge += document.getElementById('opt2').value;
         }
     }
+    
+    doge += '</h1>\
+    <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="backMain()">Voltar</a>';
 }
 
-function hideKeyboard(element) {
-    element.setAttribute('readonly', 'readonly'); // Force keyboard to hide on input field.
-    element.setAttribute('disabled', 'true'); // Force keyboard to hide on textarea field.
-    setTimeout(function() {
-        element.blur();  //actually close the keyboard
-        // Remove readonly attribute after keyboard is hidden.
-        element.removeAttribute('readonly');
-        element.removeAttribute('disabled');
-    }, 100);
+function backMain(){
+    var html = '\
+        <div class="input-field col s12" style="width: 50%">\
+            <input id="opt1" type="text" onkeydown="if (event.keyCode == 13)\
+            document.getElementById("myButton").click()">\
+            <label for="opt1">Opção 1</label>\
+        </div>\
+        <div class="input-field col s12" style="width: 50%" onkeydown="if (event.keyCode == 13)\
+            document.getElementById("myButton").click()">\
+            <input id="opt2" type="text">\
+            <label for="opt2">Opção 2</label>\
+        </div>\
+        <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="choose()">Adivinhar</a>\
+    '; 
 }
