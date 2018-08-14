@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+    backMain();
+    $($("body").get(0)).children().get(1).remove();
+});
+
 function choose() {
     var y = Math.random();
     var doge = '<h4>E o doge escolheu...</h4>\
