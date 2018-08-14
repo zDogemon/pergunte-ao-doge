@@ -13,7 +13,6 @@ function choose() {
             h1.textContent = document.getElementById('opt2').value;
         }
     }
-    hideKeyboard();
 }
 
 function hideKeyboard(element) {
