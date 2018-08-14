@@ -15,6 +15,8 @@ function choose() {
     
     doge += '</h1>\
     <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="backMain()">Voltar</a>';
+    
+    document.getElementById('batata').innerHTML = doge;
 }
 
 function backMain(){
@@ -30,5 +32,7 @@ function backMain(){
             <label for="opt2">Opção 2</label>\
         </div>\
         <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="choose()">Adivinhar</a>\
-    '; 
+    ';
+    
+    document.getElementById('batata').innerHTML = html;
 }
