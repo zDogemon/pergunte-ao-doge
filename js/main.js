@@ -7,8 +7,6 @@ $(document).ready(function () {
     });
 });
 
-
-
 function choose() {
     var y = Math.random();
     var opt1 = $("#opt1");
@@ -16,15 +14,11 @@ function choose() {
 
     var doge = '<h4><b>' + opt1.val().replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</b> ou <b>' + opt2.val().replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</b>?<br />o doge escolheu...</h4>\
         <h1> ';
-
+    
     if (opt1.val() == "" || opt2.val() == "") {
         alert("Preencha todos os campos!");
     } else {
-        if (opt1.val().toLowerCase().indexOf("crystian") > -1 && opt1.val().toLowerCase().indexOf("gay") > -1 && opt1.val().toLowerCase().indexOf("não") == -1) {
-            doge += "Pergunta outra, essa é muito fácil";
-        } else if (opt2.val().toLowerCase().indexOf("crystian") > -1 && opt2.val().toLowerCase().indexOf("gay") > -1 && opt2.val().toLowerCase().indexOf("não") == -1) {
-            doge += "Pergunta outra, essa é muito fácil";
-        } else if (y < 0.5) {
+        if (y < 0.5) {
             doge += opt1.val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
         } else {
             doge += opt2.val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
