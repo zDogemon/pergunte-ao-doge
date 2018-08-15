@@ -5,22 +5,28 @@ $( document ).ready(function() {
 
 function choose() {
     var y = Math.random();
-    var doge = '<h4>E o doge escolheu...</h4>\
+	var opt1 = $("#opt1");
+	var opt2 = $("#opt2");
+	
+    var doge = '<h4><b>'+ opt1.val().replace(/</g, "&lt;").replace(/>/g, "&gt;") +'</b> ou <b>' + opt2.val().replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</b>?<br />o doge escolheu...</h4>\
         <h1>';
     
-    if (document.getElementById('opt1').value == "" || document.getElementById('opt2').value == "") {
+    if (opt1.val() == "" || opt2.val() == "") {
         alert("Preencha todos os campos!");
     } else {
-        if (y < 0.5) {
-            doge += document.getElementById('opt1').value;
+		if (opt1.val().toLowerCase().indexOf("crystian") > -1 && opt1.val().toLowerCase().indexOf("gay") > -1 && opt1.val().toLowerCase().indexOf("não") == -1) {
+            doge += opt1.val().toString();
+		}else if(opt2.val().toLowerCase().indexOf("crystian") > -1 && opt2.val().toLowerCase().indexOf("gay") > -1 && opt2.val().toLowerCase().indexOf("não") == -1){
+			doge += opt2.val().toString();
+		}else if (y < 0.5) {
+            doge += opt1.val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
         } else {
-            doge += document.getElementById('opt2').value;
+            doge += opt2.val().replace(/</g, "&lt;").replace(/>/g, "&gt;");;
         }
-        
         doge += '</h1>\
                 <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%; margin-top: 30px" onclick="backMain()">Voltar</a>';
     
-        document.getElementById('batata').innerHTML = doge;
+        $("#batata").html(doge);
     }
 }
 
@@ -37,5 +43,5 @@ function backMain(){
         <a id="myButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%" onclick="choose()">Adivinhar</a>\
     ';
     
-    document.getElementById('batata').innerHTML = html;
+    $("#batata").html(html);
 }
