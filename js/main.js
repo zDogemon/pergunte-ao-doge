@@ -30,7 +30,7 @@ function choose() {
             doge += opt2.val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
         doge += '</h1>\
-                <a id="dogeButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%; margin-top: 24px" onclick="backMain()">Fazer outra pergunta</a>';
+                <a id="dogeButton" class="waves-effect waves-light btn blue darken-1" style="width: 50%; margin-top: 24px" onclick="backMain()">Voltar</a>';
 
         $("#doge-content").html(doge);
     }
