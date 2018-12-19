@@ -5,13 +5,19 @@
         if (event.keyCode == 13)
             $('#dogeButton').click();
     });
+    if(localStorage.getItem("dark") == "true"){
+        $("#swdark").find("input").attr("checked", "");
+        darkTheme();
+    } else {
+        lightTheme();
+    }
     $("#swdark").change(function (){
     	if($(this).find("input").is(":checked")){
             darkTheme();
-            document.cookie = "dark=true";
+            localStorage.setItem("dark", "true");
         } else {
             lightTheme();
-            document.cookie = "dark=false";
+            localStorage.setItem("dark", "false");
         }
     });
 });
