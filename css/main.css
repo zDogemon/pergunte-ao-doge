@@ -1,7 +1,27 @@
 body {
-	background: azure;
+	background-color: azure;
   }
   
 input-field input[type=text]:focus + label {
      color: azure;
  }
+
+h1 {
+  color: black;
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  color: black;
+}
+
+textarea:focus, input:focus {
+  color: black;
+}
+
+input, select, textarea {
+  color: black;
+}
