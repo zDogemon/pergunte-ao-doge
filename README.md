@@ -1,7 +1,4 @@
 # Pergunte ao doge
-
-[Acesse aqui](http://pergunte-ao-doge.000webhostapp.com/)
-
 ## PT-BR
 Seja bem-vindo ao Pergunte ao doge!
 <br><br>
